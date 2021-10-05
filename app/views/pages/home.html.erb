@@ -1,5 +1,16 @@
 <div class="home-content">
-  <div class="title">
-    <h1>Komodo Prod</h1>
+
+  <div style="position: fixed; z-index: -99; width: 100%; height: 100%">
+    <%= video_tag 'video/vid', controls: false, type: 'video/mp4', loop: :loop, muted: :muted %> 
+    <%#= video_tag 'video/vid', controls: false, type: 'video/mp4', autoplay: :autoplay, loop: :loop, muted: :muted %>
+  </div>
+  <div class="head row justify-content-space-between">
+    <h1 class="col-2"><span>Komodo Prod</span></h1>
+    <h1 class="col-8"><span id="team">Team</span></h1>
+    <h1 class="col-2"><span>Contact</span></h1>
+  </div>
+  <div class="menu d-none">
+    <%= link_to "Simon", '#' %>
+    <%= link_to "Kevin", '#' %>
   </div>
 </div>
