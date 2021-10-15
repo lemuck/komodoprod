@@ -4,7 +4,7 @@ const menuTeam = () => {
     team.addEventListener("click",openMenu);
     const openMenu = () => {
       console.log("toto")
-      menu.style.display = 'block';
+      menu.style.display = 'flex';
     }
 }
 

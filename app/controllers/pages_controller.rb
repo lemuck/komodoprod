@@ -6,4 +6,10 @@ class PagesController < ApplicationController
 
   def about
   end
+
+  def competences
+  end
+
+  def materiel
+  end
 end

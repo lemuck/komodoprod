@@ -7,7 +7,21 @@ require("@rails/ujs").start()
 require("turbolinks").start()
 require("@rails/activestorage").start()
 require("channels")
-import { menuTeam } from '../components/menuTeam';
+
+//= require jquery
+//= require jquery_ujs
+//= require bootstrap-sprockets
+//= require turbolinks
+//= require_tree .
+
+import "bootstrap";
+
+// import { menuTeam } from '../components/menuTeam';
+// import { like } from '../components/like';
+
+// document.addEventListener('turbolinks:load', () => {
+//   menuTeam();
+// });
 
 
 
