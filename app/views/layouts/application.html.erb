@@ -6,16 +6,60 @@
     <%= csp_meta_tag %>
 
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload', defer: true %>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
     <%#= favicon_link_tag asset_path('icons/logo.png') %>
   </head>
 
   <body>
+    <div class="home-content">
+      <div class="content">
+        <div class="head row justify-content-space-between">
+          <h1 class="col-2"><span onclick="openMenu('studio')">Komodo Studio</span></h1>
+          <h1 class="col-8"><span onclick="openMenu('production')">Nos productions</span></h1>
+          <h1 class="col-2"><span onclick="openMenu('contact')">Nous contacter</span></h1>
+        </div>
+        
+        <div class="sous-menu">
+          <div id="studio">
+            <%= link_to "Nos compétences", '/competences' %>
+            <%= link_to "Notre matériel", '/materiel' %>
+          </div>
+
+          <div id="production">
+            <%= link_to "Vid 1", '#' %>
+            <%= link_to "Vid 2", '#' %>
+            <%= link_to "Vid 3", '#' %>
+            <%= link_to "Vid 4", '#' %>
+            <%= link_to "Vid 5", '#' %>
+          </div>
+
+          <div id="contact">
+            <%= link_to "Un renseignement", '#' %>
+            <%= link_to "Un devis", '#' %>
+          </div>
+        </div>
+      </div>
+
+      <script>
+        function openMenu(name) {
+          var menu = document.getElementById(name)
+          if (menu.style.display === "none") {
+            menu.style.display = "flex";
+          } else if (menu.style.display === "flex") {
+            menu.style.display = "none";
+          } else {
+            menu.style.display = "flex";
+          };
+        }
+      </script>
+    </div>
+
+
     <%= render 'shared/flashes' %>
 <!--     <p class="notice"><%= notice %></p>
     <p class="alert"><%= alert %></p> -->
     <%= yield %>
-    <%= render 'shared/footer' %>
+    <%#= render 'shared/footer' %>
   </body>
 </html>
