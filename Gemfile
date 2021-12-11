@@ -6,6 +6,10 @@ gem 'bootstrap-sass'
 
 gem 'devise'
 
+gem 'dotenv-rails', groups: [:development, :test]
+gem 'cloudinary', '~> 1.16.0'
+
+
 gem 'font-awesome-sass'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails', branch: 'main'
 gem 'rails', '~> 6.0.4', '>= 6.0.4.1'
