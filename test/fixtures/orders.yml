@@ -1,0 +1,9 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  email: "joe@gmail.com"
+  message: "I want to place an order!"
+
+two:
+  email: MyString
+  message: MyText

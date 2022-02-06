@@ -1,0 +1,6 @@
+<h1>renseignement</h1>
+<%= simple_form_for(@order, url: order_index_path(@order)) do |f| %>
+	<%= f.input :email, label: "email", input_html: { class: "w-100" } %>
+	<%= f.input :message, label: "Message", input_html: {rows: 10, class: "w-100" } %>
+	<%= f.button :submit, class:"btn-form mr-0" %>
+<% end %>
